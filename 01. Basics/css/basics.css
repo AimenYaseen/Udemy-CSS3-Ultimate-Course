@@ -1,7 +1,4 @@
 
-/* body {
-  background: blue;
-} */
 
 /* 01. Comments
 ----------------
@@ -42,6 +39,8 @@ Each declaration includes a CSS property name and a value, separated by a colon.
 Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.*/
 
   /* h1 {
+  h1 is selector here
+  {} is its declaration
     color: blue;
     font-size: 12px;
   } */
@@ -65,11 +64,21 @@ We can divide CSS selectors into five categories:
   4. Pseudo-elements selectors (select and style a part of an element)
   5. Attribute selectors (select elements based on an attribute or attribute value) */
 
+/* p {
+  color: purple; // change color globaly of all paragraphs
+} */
 
+p#paragraphId{
+   color: blue;
+  /* change the color of only 1 element with this id  */
+}
 
+p.classstyle,h1.classstyle {
+  color: red;
+  size : 2em;
+}
 
-
-
+/* p,h1 // Combinator selector */
 
 /*===========================================================================================================================================*/
 
@@ -79,14 +88,36 @@ We can divide CSS selectors into five categories:
 
      Colors are specified using predefined color names, or RGB, HEX, HSL, RGBA, HSLA values.
 
-
 */
+   /* color by names  */
+ h1#color1{
+   color: dodgerblue;
+ }
 
+ h1#color2{
+   color: tomato;
+ }
 
+ h1#color3{
+   color: gray;
+ }
 
+ h1#color4{
+   color: orange;
+ }
 
+ h1#rgb{
+   color: rgb(255, 0, 0);
+ }
 
+ h1#hex {
+   /* light blue */
+   color: #00f0f0;
+ }
 
+h1#hsl{
+  color : hsl(360, 50%, 50%);
+}
 
 /*===========================================================================================================================================*/
 
@@ -96,7 +127,14 @@ We can divide CSS selectors into five categories:
 
     CSS background properties are used to add background effects for elements. */
 
-
+h1#background{
+  background: blue;
+  background-color: red;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: url();
+}
 
 
 
@@ -129,7 +167,45 @@ We can divide CSS selectors into five categories:
 
     /* hidden - Defines a hidden border */
 
+    p#borders1{
+      border-style: hidden;
+    }
 
+    p#borders2{
+      border-style: dotted;
+    }
+
+    p#borders3{
+      border-style: dashed;
+    }
+
+    p#borders4{
+      border-style: solid;
+    }
+
+    p#borders5{
+      border-style: double;
+    }
+
+    p#borders6{
+      border-style: groove;
+    }
+
+    p#borders7{
+      border-style: ridge;
+    }
+
+    p#borders8{
+      border-style: inset;
+    }
+
+    p#borders9{
+      border-style: outset;
+    }
+
+    p#borders10{
+      border-style: none;
+    }
 
 /*===========================================================================================================================================*/
 
@@ -161,7 +237,26 @@ We can divide CSS selectors into five categories:
 
     /* margin-left */
 
+div.margin {
+  height: 500px;
+  width: 500px;
+  background: black;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px
+}
 
+div.padding{
+  height: 150px;
+  width: 500px;
+  background: black;
+  padding-top: 20px;
+  padding-right: 50px;
+  padding-bottom: 70px;
+  padding-left: 30px;
+  padding: 20px 50px 70px 40px;
+}
 
 /*===========================================================================================================================================*/
 
